@@ -1,0 +1,8 @@
+
+@mixin bg-linear-duo-tone($angle, $firstColor, $firstColorStop, $secondColor,$secondColorStop){
+    background: linear-gradient($angle, $firstColor $firstColorStop, $secondColor $secondColorStop)
+}
+
+@mixin shadow {
+    box-shadow: 0px 0px 15px 5px #00000013;
+}

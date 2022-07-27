@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+:root {
+  --color1: hsl(264, 100%, 61%);
+  --color2: hsl(293, 100%, 63%);
+}
+
+#wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: right;
+}
+#wrapper::before, #wrapper::after {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 500px;
+  height: 87.5vh;
+  background: linear-gradient(0deg, var(--color1) 0%, var(--color2) 100%);
+  content: "";
+  border-radius: 0 0 250px 250px;
+  z-index: -2;
+}
+#wrapper::after {
+  left: auto;
+  right: -175px;
+  top: 12.5vh;
+  border-radius: 250px 250px 0 0;
+  opacity: 0.05;
+}
+
+#phone {
+  display: flex;
+  position: relative;
+  width: 250px;
+  height: 505px;
+  background-color: hsl(270deg, 20%, 96%);
+  border: 10px solid #fff;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.0745098039);
+  z-index: -1;
+  flex-direction: column;
+}
+#phone::before, #phone::after {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  background: linear-gradient(90deg, var(--color1) 0%, var(--color2) 100%);
+  content: "";
+  border-radius: 0 0 10px 10px;
+}
+#phone::after {
+  width: 130px;
+  height: 20px;
+  top: 0;
+  background: #fff;
+  left: calc(50% - 65px);
+  border-radius: 0 0 50px 50px;
+}
+#phone .appHeadings {
+  display: flex;
+  z-index: 0;
+  color: hsl(276deg, 100%, 81%);
+  align-items: center;
+  height: 65px;
+  width: 100%;
+  padding: 1.5rem 1rem 0 1rem;
+}
+#phone .appHeadings img {
+  height: 25px;
+  width: 25px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid hsl(276deg, 100%, 81%);
+}
+#phone .appHeadings .textInfos {
+  width: fit-content;
+  margin-right: 1rem;
+}
+#phone .appHeadings h5 {
+  font-size: 10px;
+  color: #fff;
+}
+#phone .appHeadings p {
+  font-size: 8px;
+  line-height: 1.4;
+}
+#phone .appHeadings .back {
+  margin-right: 0.5rem;
+}
+#phone .appHeadings .menu {
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-end;
+}
+#phone .conv {
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  padding: 0 0.5rem;
+  margin-top: 0.5rem;
+}
+#phone .conv .sender, #phone .conv .recipient {
+  display: flex;
+  padding: 0.6rem;
+  width: fit-content;
+  max-width: 130px;
+  margin: 0.3rem 0;
+  border-radius: 10px;
+}
+#phone .conv .sender {
+  border-bottom-right-radius: 5px;
+  align-self: flex-end;
+  color: hsl(271deg, 15%, 43%);
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.0745098039);
+}
+#phone .conv .recipient {
+  border-bottom-left-radius: 5px;
+  color: hsl(276deg, 55%, 52%);
+  background-color: hsl(272deg, 41%, 93%);
+}
+#phone .conv .pictureBox {
+  display: flex;
+  align-self: flex-end;
+  margin-top: 0.3rem;
+}
+#phone .conv img {
+  width: 40px;
+  height: 40px;
+  margin: 0.2rem;
+  border-radius: 25%;
+}
+#phone .conv .offer {
+  display: flex;
+  width: 160px;
+  max-width: 160px;
+  align-items: center;
+  color: hsl(276deg, 100%, 81%);
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 100%);
+}
+#phone .conv .radio {
+  width: 12px;
+  height: 12px;
+  border: 1px solid hsl(289deg, 100%, 72%);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+#phone .conv .price {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  justify-self: flex-end;
+  color: hsl(270deg, 20%, 96%);
+  font-size: 12px;
+}
+#phone .inputField {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  width: 92%;
+  border-radius: 25px;
+  background-color: #fff;
+  font-size: 8px;
+  margin: 0.5rem 0;
+  padding: 0.3rem 1rem;
+  padding-right: 0.3rem;
+}
+#phone .inputField p {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  color: hsl(206deg, 6%, 79%);
+}
+#phone .inputField i {
+  display: flex;
+  height: 23px;
+  width: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(271deg, 36%, 24%);
+  border-radius: 50%;
+  color: #fff;
+}
+
+#text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  margin-right: 13rem;
+}
+#text h1 {
+  color: hsl(271deg, 36%, 24%);
+  margin-bottom: 2rem;
+}
+#text p {
+  width: 500px;
+  color: hsl(270deg, 7%, 64%);
+  line-height: 1.8;
+  padding-right: 2.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
