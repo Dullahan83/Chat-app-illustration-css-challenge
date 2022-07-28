@@ -1,12 +1,13 @@
 #phone{
     display: flex;
     position: relative;
-    width: 250px;
-    height: 505px;
+    width: 17.36vw;
+    height: 63.3vh;
     background-color: $bg-app;
     border: 10px solid #fff;
-    border-radius: 35px;
+    border-radius: 2.43vw;
     overflow: hidden;
+    margin-left: 10.5vw;
     @include shadow;
     z-index: -1;
     flex-direction: column;
@@ -14,17 +15,17 @@
         position: absolute;
         top: 0;
         width: 100%;
-        height: 65px;
+        height: 8.12vh;
         @include bg-linear-duo-tone(90deg, $gradient1, 0%, $gradient2, 100%);
         content: "";
         border-radius: 0 0 10px 10px;
     }
     &::after{
-        width: 130px;
-        height: 20px;
+        width: 9vw;
+        height: 2.5vh;
         top: 0;
         background: #fff;
-        left: calc(50% - 65px);
+        left: calc(50% - 4.5vw);
         border-radius: 0 0 50px 50px;
         
     }
@@ -33,50 +34,49 @@
         z-index: 0;
         color: $app-heading;
         align-items: center;
-        height: 65px;
+        height: 8.13vh;
         width: 100%;
         padding: 1.5rem 1rem 0 1rem;
         img{
-            height: 25px;
-            width: 25px;
-            margin-right: 0.5rem;
+            height: 3.25vh;
+            width: 1.74;
+            margin-right: 0.55vw;
             border-radius: 50%;
             border: 2px solid $app-heading;
         }
         .textInfos{
-            width: fit-content;
-            margin-right: 1rem;
+            width: 100%;
+            margin-right: 1.11vw;
         }
         h5{
-            font-size: 10px;
+            font-size: 0.69vw;
             color: #fff;
         }
         p{
-            font-size: 8px;
+            font-size: 0.55vw;
             line-height: 1.4;
         }
         .back{
-            margin-right: 0.5rem;
+            margin-right: 0.55vw;
         }
         .menu{
             display: flex;
-            flex-direction: row;
             justify-self: flex-end;
         }
     }
     .conv{
         display: flex;
         flex-direction: column;
-        font-size: 8px;
-        padding: 0 0.5rem;
-        margin-top: 0.5rem;
+        font-size: 0.55vw;
+        padding: 0 0.55vw;
+        margin-top: 0.55vw;
         
         .sender, .recipient{
             display: flex;
             padding: 0.6rem;
             width: fit-content;
-            max-width: 130px;
-            margin: 0.3rem 0;
+            max-width: 9.03vw;
+            margin: 0.62vh 0;
             border-radius: 10px;
         }
         
@@ -96,37 +96,42 @@
         .pictureBox{
             display: flex;
             align-self: flex-end;
-            margin-top: 0.3rem;
+            margin-top: 0.6vh;
         }
         img{
-            width: 40px;
-            height: 40px;
+            width: 2.77vw;
+            height: 5vh;
             margin: 0.2rem;
             border-radius: 25%;
         }
         .offer{
             display: flex;
-            width: 160px;
-            max-width: 160px;
+            width: 100%;
+            max-width: 11.11vw;
             align-items: center;
             color: $app-heading;
             @include bg-linear-duo-tone(90deg, $gradient2, 0%, $gradient1, 100%);
         }
         .radio{
-            width: 12px;
-            height: 12px;
+            width: 0.83vw;
+            height: 1.5vh;
             border: 1px solid $radio-outline;
-            border-radius: 50%;
-            margin-right: 0.5rem;
+            border-radius: 20px;
+            margin-right: 0.55vw;
+        }
+        
+        p{
+            display: flex;
+            width: 5.55vw;
+            margin-right: 1.11vw;
+            color: $app-heading;
         }
         
         .price{
             display: flex;
-            flex-direction: row;
             font-weight: bold;
-            justify-self: flex-end;
-            color: $bg-app;
-            font-size: 12px;
+            color: #fff;
+            font-size: 0.83vw;
         }
     }
     .inputField{
@@ -137,10 +142,10 @@
         width: 92%;
         border-radius: 25px;
         background-color: #fff;
-        font-size: 8px;
-        margin: 0.5rem 0;
-        padding:0.3rem 1rem;
-        padding-right: 0.3rem;
+        font-size: 0.55vw;
+        margin: 1vh 0;
+        padding: 0.6vh 1.11vw;
+        padding-right: 0.33vw;
         p{
             display: flex;
             align-items: center;
@@ -150,8 +155,8 @@
         }
         i{
             display: flex;
-            height: 23px;
-            width: 25px;
+            height: 2.87vh;
+            width: 1.73vw;
             align-items: center;
             justify-content: center;
             background-color: $submit;
