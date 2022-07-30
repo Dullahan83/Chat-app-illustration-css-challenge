@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./public/css/style.css">
   <title>Frontend Mentor | [Challenge Name Here]</title>
-
+  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -23,9 +23,21 @@
         <img src="./images/avatar.jpg" alt="">
         <div class="textInfos">
           <h5>Samuel Green</h5>
-          <p>Available to walk</p>
+          <p class="subHeading">Available to walk</p>
         </div>
         <i class="fa-solid fa-ellipsis-vertical menu"></i>
+        <div id="colorPicker">
+          <i class="fa-solid fa-xmark"></i>
+          <p class="colorPicker--text">Choose gradient color</p>
+          <div class="colors">
+            <label for="color1">Color 1</label>
+            <input type="color" id="color1" value="#8838ff">
+          </div>
+          <div class="colors">
+            <label for="color2">Color 2</label>
+            <input type="color" id="color2" value="#e942ff">
+          </div>
+        </div>
       </div>
       <div class="conv">
         <p class="recipient">That sounds great. I’d be happy with that.</p> 
@@ -38,9 +50,18 @@
         <p class="sender">Here are a few pictures. She’s a happy girl!</p>
         <p class="sender">Can you make it?</p>
         <p class="recipient">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-        <div class="recipient offer"><span class="radio"></span> <p>30 minute walk</p>  <span class="price">$29</span></div>
-        <div class="recipient offer"><span class="radio"></span> <p>1 hour walk</p> <span class="price">$49</span></div>
-  
+        
+        <div class="recipient offer">
+          <input type="radio" name="half-hour" id="half-hour">
+        <label for="half-hour" >30 min walk</label>
+        <span class="price">$29</span>
+        </div>
+        <div class="recipient offer">
+          <input type="radio" name="hour" id="hour">
+          <label for="hour">1 hour walk</label>
+          <div class="price">$49</div>
+        </div>
+        
       </div>
       <div class="inputField">
         <p>Type a message… </p>
@@ -55,7 +76,6 @@
     </div>
   </main>
   <!-- Samuel Green
-  
   Type a message…
 
   

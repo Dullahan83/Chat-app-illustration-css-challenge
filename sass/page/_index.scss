@@ -5,22 +5,43 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    z-index: 0;
+    
+    @include l-screen{
+        flex-direction: row;
+    }
+
     &::before, &::after{
         position: absolute;
-        top: 0;
-        left: -5.55vw;
-        width: 34.7vw;
-        height: 87.5vh;
+        top: -200px;
+        left: -310px;
+        width: 500px;
+        height: 700px;
         @include bg-linear-duo-tone(0deg, $gradient1,0%,$gradient2,100%);
         content: '';
-        border-radius: 0 0 19vw 19vw;
+        border-radius: 0 0 300px 300px;
         z-index: -2;
+        @include m-screen{
+            left: -250px;
+        }
+        @include l-screen{
+            top: 0;
+            left: -80px;
+        }
     }
     &::after{
         left: auto;
-        right: -12.15vw;
-        top: calc(100vh - 87.5vh);
-        border-radius: 19vw 19vw 0 0;
-        opacity: 0.03;
+        right: -310px;
+        top: calc(100vh - 500px);
+        border-radius: 300px 300px 0 0;
+        opacity: 0.05;
+        @include m-screen{
+            right: -200px;
+        }
+        @include l-screen{
+            right: -12.15vw;
+            top: calc(100vh - 700px);
+        }
     }
 }

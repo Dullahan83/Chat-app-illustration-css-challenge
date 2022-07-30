@@ -1,0 +1,22 @@
+@keyframes scaleMenuUp{
+    0%{
+        transform-origin: left center;
+        transform: scale(0) translateX(-50px);
+        
+    }
+    100%{
+        transform-origin: left center;
+        transform: scale(1) translateX(0px);
+    }
+}
+
+@keyframes scaleMenuDown{
+    0%{
+        transform-origin: left center;
+        transform: scale(1) translateX(0px);
+    }
+    100%{
+        transform-origin: left center;
+        transform: scale(0) translateX(-50px);
+    }
+}

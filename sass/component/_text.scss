@@ -1,18 +1,27 @@
 #text{
     display: flex;
     flex-direction: column;
-    margin-left: 8.33vw;
+    align-items: center;
+    margin-top: 70px;
+    text-align: center;
     h1{
         font-size: 30px;
         color: $main-heading;
         margin-bottom: 2rem;
-        font-size: 2.60vw;
+        font-size: 38px;
     }
 
     p{
-        width: 34.7vw;
+        width: 82%;
         color: $paragraph;
         line-height: 1.8;
-        padding-right: 2.77vw;
+        @include m-screen{
+            width: 34.7vw;
+            padding-right: 2.77vw;
+        }
+    }
+
+    @include m-screen{
+        margin-left: 8.33vw;
     }
 }

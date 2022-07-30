@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@keyframes scaleMenuUp {
+  0% {
+    transform-origin: left center;
+    transform: scale(0) translateX(-50px);
+  }
+  100% {
+    transform-origin: left center;
+    transform: scale(1) translateX(0px);
+  }
+}
+@keyframes scaleMenuDown {
+  0% {
+    transform-origin: left center;
+    transform: scale(1) translateX(0px);
+  }
+  100% {
+    transform-origin: left center;
+    transform: scale(0) translateX(-50px);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,8 +40,8 @@ body {
 }
 
 :root {
-  --color1: hsl(264, 100%, 61%);
-  --color2: hsl(293, 100%, 63%);
+  --color1:#8838ff;
+  --color2:#e942ff;
 }
 
 #wrapper {
@@ -31,55 +51,88 @@ body {
   height: 100%;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  z-index: 0;
+}
+@media screen and (min-width: 992px) {
+  #wrapper {
+    flex-direction: row;
+  }
 }
 #wrapper::before, #wrapper::after {
   position: absolute;
-  top: 0;
-  left: -5.55vw;
-  width: 34.7vw;
-  height: 87.5vh;
+  top: -200px;
+  left: -310px;
+  width: 500px;
+  height: 700px;
   background: linear-gradient(0deg, var(--color1) 0%, var(--color2) 100%);
   content: "";
-  border-radius: 0 0 19vw 19vw;
+  border-radius: 0 0 300px 300px;
   z-index: -2;
+}
+@media screen and (min-width: 768px) {
+  #wrapper::before, #wrapper::after {
+    left: -250px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #wrapper::before, #wrapper::after {
+    top: 0;
+    left: -80px;
+  }
 }
 #wrapper::after {
   left: auto;
-  right: -12.15vw;
-  top: 12.5vh;
-  border-radius: 19vw 19vw 0 0;
-  opacity: 0.03;
+  right: -310px;
+  top: calc(100vh - 500px);
+  border-radius: 300px 300px 0 0;
+  opacity: 0.05;
+}
+@media screen and (min-width: 768px) {
+  #wrapper::after {
+    right: -200px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #wrapper::after {
+    right: -12.15vw;
+    top: calc(100vh - 700px);
+  }
 }
 
 #phone {
   display: flex;
   position: relative;
-  width: 17.36vw;
-  height: 63.3vh;
+  width: 250px;
+  height: 505px;
   background-color: hsl(270deg, 20%, 96%);
   border: 10px solid #fff;
-  border-radius: 2.43vw;
-  overflow: hidden;
+  border-radius: 35px;
   margin-left: 10.5vw;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.0745098039);
   z-index: -1;
   flex-direction: column;
 }
+@media screen and (min-width: 992px) {
+  #phone {
+    margin-left: 10.5vw;
+  }
+}
 #phone::before, #phone::after {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 8.12vh;
+  height: 56px;
   background: linear-gradient(90deg, var(--color1) 0%, var(--color2) 100%);
   content: "";
-  border-radius: 0 0 10px 10px;
+  border-radius: 25px 25px 10px 10px;
 }
 #phone::after {
-  width: 9vw;
-  height: 2.5vh;
+  width: 130px;
+  height: 20px;
   top: 0;
   background: #fff;
-  left: calc(50% - 4.5vw);
+  left: calc(50% - 65px);
   border-radius: 0 0 50px 50px;
 }
 #phone .appHeadings {
@@ -87,9 +140,9 @@ body {
   z-index: 0;
   color: hsl(276deg, 100%, 81%);
   align-items: center;
-  height: 8.13vh;
+  height: 65px;
   width: 100%;
-  padding: 1.5rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 #phone .appHeadings img {
   height: 3.25vh;
@@ -100,14 +153,14 @@ body {
 }
 #phone .appHeadings .textInfos {
   width: 100%;
-  margin-right: 1.11vw;
+  margin-right: 1rem;
 }
 #phone .appHeadings h5 {
-  font-size: 0.69vw;
+  font-size: 12px;
   color: #fff;
 }
-#phone .appHeadings p {
-  font-size: 0.55vw;
+#phone .appHeadings .subHeading {
+  font-size: 8px;
   line-height: 1.4;
 }
 #phone .appHeadings .back {
@@ -116,20 +169,24 @@ body {
 #phone .appHeadings .menu {
   display: flex;
   justify-self: flex-end;
+  position: relative;
+}
+#phone .appHeadings .menu:hover {
+  cursor: pointer;
 }
 #phone .conv {
   display: flex;
   flex-direction: column;
-  font-size: 0.55vw;
-  padding: 0 0.55vw;
-  margin-top: 0.55vw;
+  font-size: 8px;
+  padding: 0 0.4rem;
+  margin-top: 0.1rem;
 }
 #phone .conv .sender, #phone .conv .recipient {
   display: flex;
   padding: 0.6rem;
   width: fit-content;
-  max-width: 9.03vw;
-  margin: 0.62vh 0;
+  max-width: 130px;
+  margin: 0.23rem 0;
   border-radius: 10px;
 }
 #phone .conv .sender {
@@ -147,40 +204,56 @@ body {
 #phone .conv .pictureBox {
   display: flex;
   align-self: flex-end;
-  margin-top: 0.6vh;
+  margin-top: 0.3rem;
 }
 #phone .conv img {
   width: 2.77vw;
+  min-width: 40px;
   height: 5vh;
+  min-height: 40px;
   margin: 0.2rem;
   border-radius: 25%;
 }
 #phone .conv .offer {
   display: flex;
   width: 100%;
-  max-width: 11.11vw;
+  min-width: 160px;
   align-items: center;
   color: hsl(276deg, 100%, 81%);
   background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 100%);
 }
-#phone .conv .radio {
-  width: 0.83vw;
-  height: 1.5vh;
+#phone .conv input[type=radio] {
+  display: grid;
+  place-content: center;
+  appearance: none;
   border: 1px solid hsl(289deg, 100%, 72%);
+  width: 12px;
+  height: 12px;
   border-radius: 20px;
-  margin-right: 0.55vw;
+  margin-right: 0.5rem;
 }
-#phone .conv p {
-  display: flex;
-  width: 5.55vw;
-  margin-right: 1.11vw;
-  color: hsl(276deg, 100%, 81%);
+#phone .conv input[type=radio]::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em black;
+  background: hsl(289deg, 100%, 72%);
+}
+#phone .conv input[type=radio]:checked::before {
+  transform: scale(1);
+}
+#phone .conv label {
+  width: 80px;
+  margin-right: 1rem;
 }
 #phone .conv .price {
   display: flex;
   font-weight: bold;
   color: #fff;
-  font-size: 0.83vw;
+  font-size: 14px;
 }
 #phone .inputField {
   display: flex;
@@ -190,22 +263,23 @@ body {
   width: 92%;
   border-radius: 25px;
   background-color: #fff;
-  font-size: 0.55vw;
-  margin: 1vh 0;
-  padding: 0.6vh 1.11vw;
-  padding-right: 0.33vw;
+  font-size: 10px;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  padding-right: 0.3rem;
 }
 #phone .inputField p {
   display: flex;
   align-items: center;
   height: fit-content;
-  width: 100%;
+  width: 80%;
   color: hsl(206deg, 6%, 79%);
+  margin-right: 1rem;
 }
 #phone .inputField i {
   display: flex;
-  height: 2.87vh;
-  width: 1.73vw;
+  height: 25px;
+  width: 25px;
   align-items: center;
   justify-content: center;
   background-color: hsl(271deg, 36%, 24%);
@@ -213,22 +287,73 @@ body {
   color: #fff;
 }
 
+#colorPicker {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  right: -200px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.0745098039);
+  border-radius: 25px;
+  animation: scaleMenuUp 0.5s ease-in forwards;
+}
+#colorPicker i {
+  color: black;
+  display: flex;
+  width: fit-content;
+  align-self: flex-end;
+  margin: 0.5rem 0;
+}
+#colorPicker i:hover {
+  cursor: pointer;
+}
+#colorPicker .colors {
+  display: flex;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+#colorPicker .colors label {
+  width: 60px;
+}
+#colorPicker .colorPicker--text {
+  font-size: 14px;
+}
+
+.vanish {
+  display: flex;
+}
+
 #text {
   display: flex;
   flex-direction: column;
-  margin-left: 8.33vw;
+  align-items: center;
+  margin-top: 70px;
+  text-align: center;
 }
 #text h1 {
   font-size: 30px;
   color: hsl(271deg, 36%, 24%);
   margin-bottom: 2rem;
-  font-size: 2.6vw;
+  font-size: 38px;
 }
 #text p {
-  width: 34.7vw;
+  width: 82%;
   color: hsl(270deg, 7%, 64%);
   line-height: 1.8;
-  padding-right: 2.77vw;
+}
+@media screen and (min-width: 768px) {
+  #text p {
+    width: 34.7vw;
+    padding-right: 2.77vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  #text {
+    margin-left: 8.33vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
