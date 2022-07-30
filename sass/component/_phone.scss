@@ -182,7 +182,7 @@
             @include xl-screen{
                 width: 0.83vw;
                 height: 0.83vw;
-                border-width: 2px;
+                border-width: 1px;
             }
         }
         input[type="radio"]::before {
@@ -205,10 +205,10 @@
         }
 
         label{
-            width: 80px;
+            width: 70px;
             margin-right: 1rem;
             @include xl-screen{
-                width: 5.55vw;
+                width: 4.86vw;
                 margin-right: 1.11vw;
             }
         }

@@ -326,7 +326,7 @@ body {
   #phone .conv input[type=radio] {
     width: 0.83vw;
     height: 0.83vw;
-    border-width: 2px;
+    border-width: 1px;
   }
 }
 #phone .conv input[type=radio]::before {
@@ -350,12 +350,12 @@ body {
   transform: scale(1);
 }
 #phone .conv label {
-  width: 80px;
+  width: 70px;
   margin-right: 1rem;
 }
 @media screen and (min-width: 1441px) {
   #phone .conv label {
-    width: 5.55vw;
+    width: 4.86vw;
     margin-right: 1.11vw;
   }
 }
