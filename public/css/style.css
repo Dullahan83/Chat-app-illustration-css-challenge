@@ -81,6 +81,14 @@ body {
     left: -80px;
   }
 }
+@media screen and (min-width: 1441px) {
+  #wrapper::before, #wrapper::after {
+    width: 34.72vw;
+    height: 87.5vh;
+    left: -5.55vw;
+    border-radius: 0 0 18vw 18vw;
+  }
+}
 #wrapper::after {
   left: auto;
   right: -310px;
@@ -97,6 +105,15 @@ body {
   #wrapper::after {
     right: -12.15vw;
     top: calc(100vh - 700px);
+  }
+}
+@media screen and (min-width: 1441px) {
+  #wrapper::after {
+    width: 34.72vw;
+    right: -12.15vw;
+    height: 87.5vh;
+    border-radius: 18vw 18vw 0 0;
+    top: 12.5vh;
   }
 }
 
@@ -118,14 +135,25 @@ body {
     margin-left: 10.5vw;
   }
 }
+@media screen and (min-width: 1441px) {
+  #phone {
+    height: 63.12vh;
+    width: 17.36vw;
+  }
+}
 #phone::before, #phone::after {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 56px;
+  height: 65px;
   background: linear-gradient(90deg, var(--color1) 0%, var(--color2) 100%);
   content: "";
   border-radius: 25px 25px 10px 10px;
+}
+@media screen and (min-width: 1441px) {
+  #phone::before, #phone::after {
+    height: 8.12vh;
+  }
 }
 #phone::after {
   width: 130px;
@@ -135,6 +163,13 @@ body {
   left: calc(50% - 65px);
   border-radius: 0 0 50px 50px;
 }
+@media screen and (min-width: 1441px) {
+  #phone::after {
+    height: 2.5vh;
+    width: 9.3vw;
+    left: calc(50% - 4.65vw);
+  }
+}
 #phone .appHeadings {
   display: flex;
   z-index: 0;
@@ -142,26 +177,47 @@ body {
   align-items: center;
   height: 65px;
   width: 100%;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1.5rem 1rem 0 1rem;
+  margin-bottom: 0.23rem;
+}
+@media screen and (min-width: 1441px) {
+  #phone .appHeadings {
+    height: 8.12vh;
+    padding-top: 3.5vh;
+    margin-bottom: 0.5vh;
+  }
 }
 #phone .appHeadings img {
-  height: 3.25vh;
-  width: 1.74;
+  height: 1.74vw;
+  width: 1.74vw;
+  min-width: 25px;
+  min-height: 25px;
   margin-right: 0.55vw;
   border-radius: 50%;
   border: 2px solid hsl(276deg, 100%, 81%);
 }
 #phone .appHeadings .textInfos {
-  width: 100%;
+  width: 80%;
   margin-right: 1rem;
 }
 #phone .appHeadings h5 {
   font-size: 12px;
   color: #fff;
 }
+@media screen and (min-width: 1441px) {
+  #phone .appHeadings h5 {
+    font-size: 0.83vw;
+  }
+}
 #phone .appHeadings .subHeading {
   font-size: 8px;
   line-height: 1.4;
+}
+@media screen and (min-width: 1441px) {
+  #phone .appHeadings .subHeading {
+    font-size: 0.55vw;
+    line-height: 1.2;
+  }
 }
 #phone .appHeadings .back {
   margin-right: 0.55vw;
@@ -174,12 +230,23 @@ body {
 #phone .appHeadings .menu:hover {
   cursor: pointer;
 }
+@media screen and (min-width: 1441px) {
+  #phone .appHeadings .menu {
+    font-size: 1.25vw;
+  }
+}
 #phone .conv {
   display: flex;
   flex-direction: column;
   font-size: 8px;
   padding: 0 0.4rem;
   margin-top: 0.1rem;
+}
+@media screen and (min-width: 1441px) {
+  #phone .conv {
+    font-size: 0.55vw;
+    padding: 0 0.44rem;
+  }
 }
 #phone .conv .sender, #phone .conv .recipient {
   display: flex;
@@ -189,6 +256,14 @@ body {
   margin: 0.23rem 0;
   border-radius: 10px;
 }
+@media screen and (min-width: 1441px) {
+  #phone .conv .sender, #phone .conv .recipient {
+    max-width: 9.03vw;
+    margin: 0.5vh 0;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.7vw;
+  }
+}
 #phone .conv .sender {
   border-bottom-right-radius: 5px;
   align-self: flex-end;
@@ -196,10 +271,20 @@ body {
   background-color: #fff;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.0745098039);
 }
+@media screen and (min-width: 1441px) {
+  #phone .conv .sender {
+    border-bottom-right-radius: 0.35vw;
+  }
+}
 #phone .conv .recipient {
   border-bottom-left-radius: 5px;
   color: hsl(276deg, 55%, 52%);
   background-color: hsl(272deg, 41%, 93%);
+}
+@media screen and (min-width: 1441px) {
+  #phone .conv .recipient {
+    border-bottom-left-radius: 0.35vw;
+  }
 }
 #phone .conv .pictureBox {
   display: flex;
@@ -211,7 +296,7 @@ body {
   min-width: 40px;
   height: 5vh;
   min-height: 40px;
-  margin: 0.2rem;
+  margin: 0 0.2rem;
   border-radius: 25%;
 }
 #phone .conv .offer {
@@ -221,6 +306,11 @@ body {
   align-items: center;
   color: hsl(276deg, 100%, 81%);
   background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 100%);
+}
+@media screen and (min-width: 1441px) {
+  #phone .conv .offer {
+    min-width: 11.1vw;
+  }
 }
 #phone .conv input[type=radio] {
   display: grid;
@@ -232,6 +322,13 @@ body {
   border-radius: 20px;
   margin-right: 0.5rem;
 }
+@media screen and (min-width: 1441px) {
+  #phone .conv input[type=radio] {
+    width: 0.83vw;
+    height: 0.83vw;
+    border-width: 2px;
+  }
+}
 #phone .conv input[type=radio]::before {
   content: "";
   width: 8px;
@@ -239,8 +336,15 @@ body {
   border-radius: 50%;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em black;
+  box-shadow: inset 1em 1em hsl(289deg, 100%, 72%);
   background: hsl(289deg, 100%, 72%);
+}
+@media screen and (min-width: 1441px) {
+  #phone .conv input[type=radio]::before {
+    width: 0.58vw;
+    height: 0.58vw;
+    box-shadow: inset 1em 1em hsl(289deg, 100%, 72%);
+  }
 }
 #phone .conv input[type=radio]:checked::before {
   transform: scale(1);
@@ -249,11 +353,22 @@ body {
   width: 80px;
   margin-right: 1rem;
 }
+@media screen and (min-width: 1441px) {
+  #phone .conv label {
+    width: 5.55vw;
+    margin-right: 1.11vw;
+  }
+}
 #phone .conv .price {
   display: flex;
   font-weight: bold;
   color: #fff;
   font-size: 14px;
+}
+@media screen and (min-width: 1441px) {
+  #phone .conv .price {
+    font-size: 0.95vw;
+  }
 }
 #phone .inputField {
   display: flex;
@@ -268,6 +383,14 @@ body {
   padding: 0.5rem 1rem;
   padding-right: 0.3rem;
 }
+@media screen and (min-width: 1441px) {
+  #phone .inputField {
+    margin: 1vh 0;
+    padding: 0.8vh 1.11vw;
+    padding-right: 0.5vw;
+    border-radius: 1.73vw;
+  }
+}
 #phone .inputField p {
   display: flex;
   align-items: center;
@@ -275,6 +398,12 @@ body {
   width: 80%;
   color: hsl(206deg, 6%, 79%);
   margin-right: 1rem;
+}
+@media screen and (min-width: 1441px) {
+  #phone .inputField p {
+    font-size: 0.7vw;
+    margin-right: 1vw;
+  }
 }
 #phone .inputField i {
   display: flex;
@@ -285,6 +414,12 @@ body {
   background-color: hsl(271deg, 36%, 24%);
   border-radius: 50%;
   color: #fff;
+}
+@media screen and (min-width: 1441px) {
+  #phone .inputField i {
+    width: 1.73vw;
+    height: 3.4vh;
+  }
 }
 
 #colorPicker {
@@ -339,6 +474,11 @@ body {
   margin-bottom: 2rem;
   font-size: 38px;
 }
+@media screen and (min-width: 1441px) {
+  #text h1 {
+    font-size: 2.64vw;
+  }
+}
 #text p {
   width: 82%;
   color: hsl(270deg, 7%, 64%);
@@ -348,6 +488,11 @@ body {
   #text p {
     width: 34.7vw;
     padding-right: 2.77vw;
+  }
+}
+@media screen and (min-width: 1441px) {
+  #text p {
+    font-size: 1.11vw;
   }
 }
 @media screen and (min-width: 768px) {

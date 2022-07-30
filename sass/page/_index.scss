@@ -29,6 +29,12 @@
             top: 0;
             left: -80px;
         }
+        @include xl-screen{
+            width: 34.72vw;
+            height: 87.5vh;
+            left: -5.55vw;
+            border-radius: 0 0 18vw 18vw;
+        }
     }
     &::after{
         left: auto;
@@ -42,6 +48,13 @@
         @include l-screen{
             right: -12.15vw;
             top: calc(100vh - 700px);
+        }
+        @include xl-screen{
+            width: 34.72vw;
+            right: -12.15vw;
+            height: 87.5vh;
+            border-radius: 18vw 18vw 0 0;
+            top: calc(100vh - 87.5vh);
         }
     }
 }

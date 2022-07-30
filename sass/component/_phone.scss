@@ -7,20 +7,28 @@
     border: 10px solid #fff;
     border-radius: 35px;
     margin-left: 10.5vw;
-    @include l-screen{
-        margin-left: 10.5vw;
-    }
     @include shadow;
     z-index: -1;
     flex-direction: column;
+    @include l-screen{
+        margin-left: 10.5vw;
+    }
+    @include xl-screen{
+        height: 63.12vh;
+        width: 17.36vw;
+    }
+    
     &::before,&::after{
         position: absolute;
         top: 0;
         width: 100%;
-        height: 56px;
+        height: 65px;
         @include bg-linear-duo-tone(90deg, $gradient1, 0%, $gradient2, 100%);
         content: "";
         border-radius: 25px 25px 10px 10px;
+        @include xl-screen{
+            height: 8.12vh;
+        }
     }
     &::after{
         width: 130px;
@@ -29,7 +37,11 @@
         background: #fff;
         left: calc(50% - 65px);
         border-radius: 0 0 50px 50px;
-        
+        @include xl-screen{
+            height: 2.5vh;
+            width: 9.3vw;
+            left: calc(50% - 4.65vw);
+        }
     }
     .appHeadings{
         display: flex;
@@ -38,25 +50,40 @@
         align-items: center;
         height: 65px;
         width: 100%;
-        padding: 1rem 1rem 0 1rem;
+        padding: 1.5rem 1rem 0 1rem;
+        margin-bottom: 0.23rem;
+        @include xl-screen{
+            height: 8.12vh;
+            padding-top: 3.5vh;
+            margin-bottom: 0.5vh;
+        }
         img{
-            height: 3.25vh;
-            width: 1.74;
+            height: 1.74vw;
+            width: 1.74vw;
+            min-width: 25px;
+            min-height: 25px;
             margin-right: 0.55vw;
             border-radius: 50%;
             border: 2px solid $app-heading;
         }
         .textInfos{
-            width: 100%;
+            width: 80%;
             margin-right: 1rem;
         }
         h5{
             font-size: 12px;
             color: #fff;
+            @include xl-screen{
+                font-size: 0.83vw;
+            }
         }
         .subHeading{
             font-size: 8px;
             line-height: 1.4;
+            @include xl-screen{
+                font-size: 0.55vw;
+                line-height: 1.2;
+            }
         }
 
         .back{
@@ -69,6 +96,9 @@
             &:hover{
                 cursor: pointer;
             }
+            @include xl-screen{
+                font-size: 1.25vw;
+            }
         }
     }
     .conv{
@@ -77,7 +107,10 @@
         font-size: 8px;
         padding: 0 0.4rem;
         margin-top: 0.1rem;
-        
+        @include xl-screen{
+            font-size: 0.55vw;
+            padding: 0 0.44rem;
+        }
         .sender, .recipient{
             display: flex;
             padding: 0.6rem;
@@ -85,6 +118,12 @@
             max-width: 130px;
             margin: 0.23rem 0;
             border-radius: 10px;
+            @include xl-screen{
+                max-width: 9.03vw;
+                margin: 0.5vh 0;
+                padding: 0.6rem 0.8rem;
+                border-radius: 0.7vw
+            }
         }
         
         .sender{
@@ -93,12 +132,18 @@
             color: $right-chat;
             background-color: #fff;
             @include shadow;
+            @include xl-screen{
+                border-bottom-right-radius: 0.35vw;
+            }
         }
         
         .recipient{
             border-bottom-left-radius: 5px;
             color: $left-chat;
             background-color: hsl(272, 41%, 93%);
+            @include xl-screen{
+                border-bottom-left-radius: 0.35vw;
+            }
         }
         .pictureBox{
             display: flex;
@@ -110,7 +155,7 @@
             min-width: 40px;
             height: 5vh;
             min-height: 40px;
-            margin: 0.2rem;
+            margin: 0 0.2rem;
             border-radius: 25%;
         }
         .offer{
@@ -120,6 +165,9 @@
             align-items: center;
             color: $app-heading;
             @include bg-linear-duo-tone(90deg, $gradient2, 0%, $gradient1, 100%);
+            @include xl-screen{
+                min-width: 11.1vw;
+            }
         }
         
         input[type=radio]{
@@ -131,7 +179,11 @@
             height: 12px;
             border-radius: 20px;
             margin-right: 0.5rem;
-            
+            @include xl-screen{
+                width: 0.83vw;
+                height: 0.83vw;
+                border-width: 2px;
+            }
         }
         input[type="radio"]::before {
             content: "";
@@ -140,8 +192,13 @@
             border-radius: 50%;
             transform: scale(0);
             transition: 120ms transform ease-in-out;
-            box-shadow: inset 1em 1em black;
+            box-shadow: inset 1em 1em $radio-outline;
             background: $radio-outline;
+            @include xl-screen{
+                width: 0.58vw;
+                height: 0.58vw;
+                box-shadow: inset 1em 1em $radio-outline;
+            }
         }
         input[type="radio"]:checked::before {
             transform: scale(1);
@@ -150,12 +207,19 @@
         label{
             width: 80px;
             margin-right: 1rem;
+            @include xl-screen{
+                width: 5.55vw;
+                margin-right: 1.11vw;
+            }
         }
         .price{
             display: flex;
             font-weight: bold;
             color: #fff;
             font-size: 14px;
+            @include xl-screen{
+                font-size: 0.95vw;
+            }
         }
     }
     .inputField{
@@ -170,6 +234,12 @@
         margin: 0.5rem 0;
         padding: 0.5rem 1rem;
         padding-right: 0.3rem;
+        @include xl-screen{
+            margin: 1vh 0;
+            padding: 0.8vh 1.11vw;
+            padding-right: 0.5vw;
+            border-radius: 1.73vw;   
+        }
         p{
             display: flex;
             align-items: center;
@@ -177,6 +247,10 @@
             width: 80%;
             color: $placeholder;
             margin-right: 1rem;
+            @include xl-screen{
+                font-size: 0.7vw;
+                margin-right: 1vw;
+            }
         }
         i{
             display: flex;
@@ -187,6 +261,10 @@
             background-color: $submit;
             border-radius: 50%;
             color: #fff;
+            @include xl-screen{
+                width: 1.73vw;
+                height: 3.4vh;
+            }
         }
     }
 }

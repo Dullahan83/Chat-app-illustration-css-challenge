@@ -9,6 +9,9 @@
         color: $main-heading;
         margin-bottom: 2rem;
         font-size: 38px;
+        @include xl-screen{
+            font-size: 2.64vw;
+        }
     }
 
     p{
@@ -18,6 +21,9 @@
         @include m-screen{
             width: 34.7vw;
             padding-right: 2.77vw;
+        }
+        @include xl-screen{
+            font-size: 1.11vw;
         }
     }
 

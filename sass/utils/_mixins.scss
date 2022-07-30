@@ -17,3 +17,8 @@
         @content
     }
 }
+@mixin xl-screen {
+    @media screen and(min-width: 1441px) {
+        @content
+    }
+}

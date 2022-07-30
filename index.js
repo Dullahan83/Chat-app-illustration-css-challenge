@@ -1,8 +1,8 @@
-/* function calcProportion(base, taille){
+function calcProportion(base, taille){
     let result = base / taille
     return 100 / result;
 }
- */
+
 
 let style = getComputedStyle(document.documentElement)
 
