@@ -188,10 +188,8 @@ body {
   }
 }
 #phone .appHeadings img {
-  height: 1.74vw;
   width: 1.74vw;
   min-width: 25px;
-  min-height: 25px;
   margin-right: 0.55vw;
   border-radius: 50%;
   border: 2px solid hsl(276deg, 100%, 81%);
@@ -341,8 +339,8 @@ body {
 }
 @media screen and (min-width: 1441px) {
   #phone .conv input[type=radio]::before {
-    width: 0.58vw;
-    height: 0.58vw;
+    width: 0.5vw;
+    height: 0.52vw;
     box-shadow: inset 1em 1em hsl(289deg, 100%, 72%);
   }
 }
