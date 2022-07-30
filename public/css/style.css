@@ -9,14 +9,14 @@
     transform: scale(1) translateX(0px);
   }
 }
-@keyframes scaleMenuDown {
+@keyframes threadAppearance {
   0% {
-    transform-origin: left center;
-    transform: scale(1) translateX(0px);
+    transform-origin: top center;
+    transform: translateY(450px);
   }
   100% {
-    transform-origin: left center;
-    transform: scale(0) translateX(-50px);
+    transform-origin: top center;
+    transform: translateY(0);
   }
 }
 * {
@@ -239,6 +239,7 @@ body {
   font-size: 8px;
   padding: 0 0.4rem;
   margin-top: 0.1rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 1441px) {
   #phone .conv {
@@ -253,6 +254,7 @@ body {
   max-width: 130px;
   margin: 0.23rem 0;
   border-radius: 10px;
+  animation: threadAppearance 1.2s ease-in-out forwards;
 }
 @media screen and (min-width: 1441px) {
   #phone .conv .sender, #phone .conv .recipient {
@@ -288,6 +290,7 @@ body {
   display: flex;
   align-self: flex-end;
   margin-top: 0.3rem;
+  animation: threadAppearance 1.2s ease-in-out forwards;
 }
 #phone .conv img {
   width: 2.77vw;

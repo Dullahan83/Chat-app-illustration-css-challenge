@@ -105,6 +105,9 @@
         font-size: 8px;
         padding: 0 0.4rem;
         margin-top: 0.1rem;
+        overflow: hidden;
+        
+        
         @include xl-screen{
             font-size: 0.55vw;
             padding: 0 0.44rem;
@@ -116,6 +119,7 @@
             max-width: 130px;
             margin: 0.23rem 0;
             border-radius: 10px;
+            animation: threadAppearance 1.2s ease-in-out forwards;
             @include xl-screen{
                 max-width: 9.03vw;
                 margin: 0.5vh 0;
@@ -147,6 +151,7 @@
             display: flex;
             align-self: flex-end;
             margin-top: 0.3rem;
+            animation: threadAppearance 1.2s ease-in-out forwards;
         }
         img{
             width: 2.77vw;

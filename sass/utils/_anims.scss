@@ -10,13 +10,16 @@
     }
 }
 
-@keyframes scaleMenuDown{
+@keyframes threadAppearance {
     0%{
-        transform-origin: left center;
-        transform: scale(1) translateX(0px);
+        transform-origin: top center;
+        transform: translateY(450px);
+    }
+    10%{
     }
     100%{
-        transform-origin: left center;
-        transform: scale(0) translateX(-50px);
+        transform-origin: top center;
+        transform: translateY(0);
+
     }
 }
