@@ -290,6 +290,7 @@ body {
   display: flex;
   align-self: flex-end;
   margin-top: 0.3rem;
+  margin-bottom: 0.2rem;
   animation: threadAppearance 1.2s ease-in-out forwards;
 }
 #phone .conv img {
